@@ -6,7 +6,8 @@
   "scripts": {
     "tsc": "tsc",
     "dev": "ts-node-dev --respawn --transpileOnly ./src/app.ts",
-    "start": "tsc && cp -R src/views dist/views && node dist/app.js"
+    "copyRefs": "cp -R src/views dist/views && cp src/courses.json dist",
+    "start": "tsc && yarn copyRefs && node dist/app.js"
   },
   "author": "",
   "license": "ISC",
